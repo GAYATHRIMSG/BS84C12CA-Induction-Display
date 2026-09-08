@@ -1,0 +1,459 @@
+ 
+
+
+
+;;;;;/********************************************************************************************************//**
+;;;;;* @file    IIC_SLAVE_HXT_CTOUCH_V512.DEF
+;;;;;* @brief   TK_IIC_HXT_SLAVE def Code
+;;;;;* @version V1.01
+;;;;;* @note    IIC SLAVE STANDARD code for Touch Library V501 /n
+;;;;;*          HXT_Editor can R/W option
+;;;;;* @author  BSI
+;;;;;*************************************************************************************************************
+;;;;;*
+;;;;;* <h2><center>Copyright (C) 2020 Best Solution electronics Inc. All rights reserved</center></h2>
+;;;;;*
+;;;;;************************************************************************************************************/
+;;;;;/*
+
+;*********************************************************************
+;                 IIC SLAVE SETTING
+;*********************************************************************
+                #define HXT_KeyAmount  TouchKeyAmount
+                #define LIB_version    512H
+
+                ifndef  IIC_ADDRESS
+                        #define IIC_ADDRESS     IIC_INT_ADDR
+                endif
+                ifndef  IIC_SDA_PU
+                        #define IIC_SDA_PU      
+                endif
+                ifndef  IIC_SCL_PU
+                        #define IIC_SCL_PU      
+                endif
+                
+                ifndef  IIC_SDA_PIN
+                        #define IIC_SDA_PIN     
+                endif
+                ifndef  IIC_SCL_PIN
+                        #define IIC_SCL_PIN     
+                endif
+
+
+;*********************************************************************
+;               HXT EDITOR RAM MAPPING
+;*********************************************************************
+#define CMD_R_Lib_VersionL     00H
+#define CMD_R_Lib_VersionH     01H
+#define CMD_R_KeyAmount        02H
+#define CMD_R_EE_Status        03H
+#define CMD_R_TK_Select0       04H
+#define CMD_R_KeyStatus0       08H
+#define CMD_R_K1_Freq          010H
+#define CMD_R_K1_Ref           050H
+#define CMD_R_K1_Offset        090H
+#define CMD_R_K1_RCC           0B0H
+
+#define CMD_RW_Global          0D0H
+#define CMD_RW_DeviceA         CMD_RW_Global+0
+#define CMD_RW_DeviceB         CMD_RW_Global+1
+#define CMD_RW_KeyAmount       CMD_RW_Global+2
+#define CMD_RW_OptionA         CMD_RW_Global+3
+#define CMD_RW_OptionB         CMD_RW_Global+4
+#define CMD_RW_OptionC         CMD_RW_Global+5
+;#define CMD_RW_               CMD_RW_Global+6
+;#define CMD_RW_               CMD_RW_Global+7
+#define CMD_RW_K1_TH           CMD_RW_Global+8
+;*********************************************************************
+
+
+
+#define READ_ADDR_000H         CMD_R_Lib_VersionL
+#define READ_ADDR_001H         CMD_R_Lib_VersionH
+#define READ_ADDR_002H         CMD_R_KeyAmount
+#define READ_ADDR_003H         CMD_R_EE_Status
+#define READ_ADDR_004H         CMD_R_TK_Select0
+#define READ_ADDR_008H         CMD_R_KeyStatus0
+#define READ_ADDR_010H         CMD_R_K1_Freq
+#define READ_ADDR_050H         CMD_R_K1_Ref
+#define READ_ADDR_090H         CMD_R_K1_Offset
+#define READ_ADDR_0B0H         CMD_R_K1_RCC
+#define READ_ADDR_0D0H         0D0H
+#define READ_ADDR_0D3H         CMD_RW_OptionA
+#define READ_ADDR_0D6H         0D6H
+#define READ_ADDR_0D8H         CMD_RW_K1_TH
+
+#define WRITE_ADDR_0D0H        CMD_RW_Global
+;#define WRITE_ADDR_0D8H        CMD_RW_K1_TH
+;*********************************************************************
+
+;================================================
+#define MASTER_WRITE_SETTING_RAM_Bank 0
+RAMBANK 0 TK_IIC_HXT_SLAVE_USER_RAM
+TK_IIC_HXT_SLAVE_USER_RAM       .SECTION  'DATA'
+MASTER_CHECK_SUM        DB  ?
+_TKS_TIME_BASE_BUF      DB  ?
+_STANDBY_TIME_BUF       DB  ?
+
+IIC_EE_STATUS   LABEL   BYTE
+bWriteOption    DBIT        ;0
+IIC_EE_STS_BIT1 DBIT        ;1
+bUpDateOption   DBIT        ;2
+IIC_STANDBY_TIME DBIT        ;3
+IIC_EE_STS_BIT4 DBIT        ;4
+IIC_EE_STS_BIT5 DBIT        ;5
+_bIIC_WRITE     DBIT        ;6
+bCheckSum_Error DBIT        ;7
+RAMBANK MASTER_WRITE_SETTING_RAM_Bank
+MASTER_WRITE_SETTING    DB  ((CMD_RW_K1_TH-CMD_RW_Global)+HXT_KeyAmount)   DUP(?)
+;================================================
+
+
+ifdef   PBP
+ROMBANK 0 TK_IIC_HXT_SLAVE_USER_CODE
+endif
+;*********************************************************************
+TK_IIC_HXT_SLAVE_USER_CODE       .SECTION  'code'
+;---------------------------------------------------------------------------------
+TK_IIC_HXT_SLAVE_STANDARD_INITIAL:
+        LOAD_OPTION:
+                MOV     A,MASTER_WRITE_SETTING_RAM_Bank
+                MOV     BP,A
+
+                MOV     A,OFFSET MASTER_WRITE_SETTING[(CMD_RW_OptionA-CMD_RW_Global)]
+                MOV     MP1,A
+                MOV     A,_GLOBE_VARIES[0]
+                MOV     IAR1,A
+
+                MOV     A,OFFSET MASTER_WRITE_SETTING[(CMD_RW_OptionB-CMD_RW_Global)]
+                MOV     MP1,A
+                MOV     A,_GLOBE_VARIES[1]
+                MOV     IAR1,A
+
+                MOV     A,OFFSET MASTER_WRITE_SETTING[(CMD_RW_OptionC-CMD_RW_Global)]
+                MOV     MP1,A
+                MOV     A,_GLOBE_VARIES[2]
+                MOV     IAR1,A
+
+                MOV     A,HXT_KeyAmount
+                MOV     _DATA_BUF[0],A
+        ifndef  _SET_KEY_THR
+                MOV     A,OFFSET    _GLOBE_VARIES[3]
+                MOV     MP0,A
+                MOV     A,OFFSET    MASTER_WRITE_SETTING[(CMD_RW_K1_TH-CMD_RW_Global)]
+                MOV     MP1,A
+            $1:
+                MOV     A,IAR0
+                MOV     IAR1,A
+                INC     MP1
+                INC     MP0
+                SDZ     _DATA_BUF[0]
+                JMP     $1
+        else
+                CLR     _DATA_BUF[0]
+            $1:
+                MOV     A,offset _KEY_THR
+                ADD     A,_DATA_BUF[0]
+                MOV     MP1,A
+                MOV     A,BANK _KEY_THR
+                MOV     BP,A
+                MOV     A,IAR1
+                MOV     _DATA_BUF[1],A
+
+                MOV     A,offset MASTER_WRITE_SETTING[(CMD_RW_K1_TH-CMD_RW_Global)]
+                ADD     A,_DATA_BUF[0]
+                MOV     MP1,A
+                MOV     A,BANK MASTER_WRITE_SETTING
+                MOV     BP,A
+                MOV     A,_DATA_BUF[1]
+                MOV     IAR1,A
+
+                INC     _DATA_BUF[0]
+                MOV     A,HXT_KeyAmount-1
+                SUB     A,_DATA_BUF[0]
+                SZ      C
+                JMP     $1
+        endif
+                CLR     bCheckSum_Error
+                RET
+
+;---------------------------------------------------------------------------------
+TK_IIC_HXT_SLAVE_STANDARD_FUNCTION:
+
+
+SNZ     IIC_STANDBY_TIME
+JMP     $+7
+
+MOV     A,_STANDBY_TIME
+SUB     A,5
+MOV     A,5
+SNZ     C 
+MOV     _STANDBY_TIME,A
+CLR     IIC_STANDBY_TIME
+
+
+                SZ      bUpDateOption
+                JMP     SAVE_OPTION
+                SNZ     bCheckSum_Error
+                RET
+                CLR     bCheckSum_Error
+                JMP     LOAD_OPTION
+
+            SAVE_OPTION:
+                MOV     A,MASTER_WRITE_SETTING_RAM_Bank
+                MOV     BP,A
+                MOV     A,OFFSET MASTER_WRITE_SETTING[(CMD_RW_OptionA-CMD_RW_Global)]
+                MOV     MP1,A
+                MOV     A,IAR1
+                MOV     _GLOBE_VARIES[0],A
+
+                MOV     A,OFFSET MASTER_WRITE_SETTING[(CMD_RW_OptionB-CMD_RW_Global)]
+                MOV     MP1,A
+                MOV     A,IAR1
+                MOV     _GLOBE_VARIES[1],A
+
+                MOV     A,OFFSET MASTER_WRITE_SETTING[(CMD_RW_OptionC-CMD_RW_Global)]
+                MOV     MP1,A
+                MOV     A,IAR1
+                MOV     _GLOBE_VARIES[2],A
+
+        ifdef   _SET_KEY_THR
+                CLR     _DATA_BUF[0]
+            $2:
+                MOV     A,offset MASTER_WRITE_SETTING[(CMD_RW_K1_TH-CMD_RW_Global)]
+                ADD     A,_DATA_BUF[0]
+                MOV     MP1,A
+                MOV     A,BANK MASTER_WRITE_SETTING
+                MOV     BP,A
+                MOV     A,IAR1
+                MOV     _DATA_BUF[1],A
+
+                MOV     A,offset _KEY_THR
+                ADD     A,_DATA_BUF[0]
+                MOV     MP1,A
+                MOV     A,BANK _KEY_THR
+                MOV     BP,A
+                MOV     A,_DATA_BUF[1]
+                MOV     IAR1,A
+
+                INC     _DATA_BUF[0]
+                MOV     A,HXT_KeyAmount-1
+                SUB     A,_DATA_BUF[0]
+                SZ      C
+                JMP     $2
+        else
+                MOV     A,HXT_KeyAmount
+                MOV     _DATA_BUF[0],A
+                MOV     A,OFFSET    _GLOBE_VARIES[3]
+                MOV     MP0,A
+                MOV     A,OFFSET    MASTER_WRITE_SETTING[(CMD_RW_K1_TH-CMD_RW_Global)]
+                MOV     MP1,A
+                MOV     A,BANK MASTER_WRITE_SETTING
+                MOV     BP,A
+            $2:
+                MOV     A,IAR1
+                MOV     IAR0,A
+                INC     MP1
+                INC     MP0
+                SDZ     _DATA_BUF[0]
+                JMP     $2
+        endif
+
+                CLR     bUpDateOption
+                CALL    _LIBRARY_RESET
+            ;=========================================================
+                RET
+;---------------------------------------------------------------------------------
+
+
+;---------------------------------------------------------------------------------
+_TK_IIC_HXT_SLAVE_HALT_PREPARE:
+_TK_IIC_HXT_SLAVE_HALT_WAKEUP:
+                SNZ     IIC_STANDBY_TIME
+                RET
+                CLR     _HALT_STATE
+                RET
+
+_TK_IIC_HXT_SLAVE_RETURN_MAIN:
+				SNZ		IIC_STANDBY_TIME
+				RET
+                MOV     A,5
+                MOV     _STANDBY_TIME,A
+                RET
+
+
+;---------------------------------------------------------------------------------
+IIC_INT_EXECUTE:
+                SET     IIC_STANDBY_TIME
+                CLR     _HALT_STATE
+                
+                SNZ     IIC_TimeOut
+                JMP     IIC_INT_EXECUTE_END     ;if(SIMTOF==0) goto IIC_INT_EXECUTE_END
+                                                ;if(SIMTOF==1)
+                CLR     IIC_TimeOut             ;SIMTOF=0
+                SET     IIC_TimeOut_ENABLE      ;SIMTOEN=1
+                SET     IIC_ADDR_MATCH_WAKEUP   ;IAMWU=1
+                JMP     _ENDIIC
+;---------------------------------------------------------------------------------
+
+WRITE_TOUCH_GLOBAL:
+                MOV     A,IIC_DATA_INDEX
+                SUB     A,CMD_RW_Global
+                SNZ     Z
+                JMP     $+4
+                SET     bWriteOption
+                CLR     MASTER_CHECK_SUM
+                CLR     bCheckSum_Error
+
+                SZ      bUpDateOption
+                JMP     END_IIC_RW
+
+                MOV     A,CMD_RW_K1_TH+HXT_KeyAmount
+                SUB     A,IIC_DATA_INDEX
+                SZ      Z
+                JMP     WRITE_CHECK_SUM
+
+                ;=======CHECK OVERFLOW=====
+                MOV     A,IIC_DATA_INDEX
+                SUB     A,CMD_RW_Global
+                SNZ     C
+                JMP     RX_NEXT_DATA
+
+                SUB     A,((CMD_RW_K1_TH-CMD_RW_Global)+HXT_KeyAmount)
+                SZ      C
+                JMP     RX_NEXT_DATA
+                ;==========================
+
+                MOV     A,IIC_DATA_INDEX
+                SUB     A,CMD_RW_Global
+                ADD     A,OFFSET MASTER_WRITE_SETTING
+                MOV     MP1,A
+                MOV     A,BANK   MASTER_WRITE_SETTING
+                MOV     BP,A
+                MOV     A,IIC_DATA_IN
+                MOV     IAR1,A
+                ADDM    A,MASTER_CHECK_SUM        ;CHECK SUM
+                JMP     RX_NEXT_DATA
+        WRITE_CHECK_SUM:
+                SNZ     bWriteOption
+                JMP     END_IIC_RW
+                CLR     bWriteOption
+                CLR     bCheckSum_Error
+
+                MOV     A,IIC_DATA_IN
+                XOR     A,MASTER_CHECK_SUM
+                SZ      Z
+                SET     bUpDateOption
+                SNZ     Z
+                SET     bCheckSum_Error
+                JMP     END_IIC_RW
+;---------------------------------------------------------------------------------
+
+READ_MASTER_READ_DATA0:
+                MOV     A,low LIB_version
+                JMP     TX_ACC
+READ_MASTER_READ_DATA1:
+                MOV     A,high LIB_version
+                JMP     TX_ACC
+
+READ_KEY_AMOUNT:
+                MOV     A,HXT_KeyAmount
+                JMP     TX_ACC
+READ_RETURN_0:
+READ_EE_STATUS:
+                MOV     A,0
+        SZ      PDF
+        SET     ACC.0
+                JMP     TX_ACC
+READ_KEY_IO_SELECT:
+                ADD     A,OFFSET    _KEY_IO_SEL
+                MOV     MP1,A
+                MOV     A,BANK  _KEY_IO_SEL
+                MOV     BP,A
+                MOV     A,IAR1
+                XOR     A,0FFH
+                JMP     TX_ACC
+READ_KEY_STATUS:
+                ADD     A,OFFSET    _KEY_DATA
+                MOV     MP1,A
+                MOV     A,BANK  _KEY_DATA
+                JMP     TX_IAR1
+;;;;;//-READ FREQ-
+READ_KEY_FREQ:
+                SZ      IIC_DATA_INDEX.0
+                JMP     TX_00H
+                ;RL      ACC
+                ADD     A,OFFSET    _KEY_REF + 1
+                MOV     MP1,A
+
+                MOV     A,BANK  _KEY_REF
+                JMP     TX_IAR1
+;;;;;//-READ REFERENCE-
+READ_KEY_REFERENCE:
+                SZ      IIC_DATA_INDEX.0
+                JMP     TX_00H
+                ;RL      ACC
+                ADD     A,OFFSET    _KEY_REF
+                MOV     MP1,A
+                MOV     A,BANK  _KEY_REF
+                JMP     TX_IAR1
+READ_ADDR_90H:
+                JMP     END_IIC_RW
+;;;;;//-READ RCC-
+READ_KEY_RCC:
+                RL      ACC
+                RL      ACC
+                ADD     A,OFFSET    _BALANCE_CAP ;3M CAP L
+                MOV     MP1,A
+                MOV     A,BANK  _BALANCE_CAP
+                MOV     BP,A
+                
+                MOV     A,IAR1
+                MOV     IIC_DATA_OUT,A
+                INC     MP1
+                RRCA    IAR1
+                RRC     IIC_DATA_OUT
+                RRCA    ACC
+                RRC     IIC_DATA_OUT
+                JMP     END_IIC_RW
+                
+READ_TOUCH_LIB_SETTING:
+                ADD     A,OFFSET _GLOBE_VARIES
+                MOV     MP1,A
+                MOV     A,BANK _GLOBE_VARIES
+                JMP     TX_IAR1
+READ_KEY_THRESHOLD:
+        ifdef _KEY_THR
+                ADD     A,OFFSET _KEY_THR
+        else
+                ADD     A,OFFSET _GLOBE_VARIES+3
+        endif
+                MOV     MP1,A
+        ifdef _KEY_THR
+                MOV     A,BANK  _KEY_THR
+        else
+                MOV     A,BANK  _GLOBE_VARIES
+        endif
+                JMP     TX_IAR1
+
+;*********************************************************************
+#define READ_ADDR_0D8H_GOTO     READ_KEY_THRESHOLD
+#define READ_ADDR_0D6H_GOTO     READ_RETURN_0
+#define READ_ADDR_0D3H_GOTO     READ_TOUCH_LIB_SETTING
+#define READ_ADDR_0D0H_GOTO     READ_RETURN_0
+#define READ_ADDR_090H_GOTO     READ_ADDR_90H
+#define READ_ADDR_0B0H_GOTO     READ_KEY_RCC
+#define READ_ADDR_050H_GOTO     READ_KEY_REFERENCE
+#define READ_ADDR_010H_GOTO     READ_KEY_FREQ
+#define READ_ADDR_008H_GOTO     READ_KEY_STATUS
+#define READ_ADDR_004H_GOTO     READ_KEY_IO_SELECT
+#define READ_ADDR_003H_GOTO     READ_EE_STATUS
+#define READ_ADDR_002H_GOTO     READ_KEY_AMOUNT
+#define READ_ADDR_001H_GOTO     READ_MASTER_READ_DATA1
+#define READ_ADDR_000H_GOTO     READ_MASTER_READ_DATA0
+
+#define WRITE_ADDR_0D0H_GOTO    WRITE_TOUCH_GLOBAL
+;*********************************************************************
+
+
+;;;;;*/

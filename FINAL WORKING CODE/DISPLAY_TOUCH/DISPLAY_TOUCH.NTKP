@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<tkproject>
+    <tkwsinfo>
+        <version>4.1.2</version>
+    </tkwsinfo>
+    <project>
+        <mcu>BS84C12CA</mcu>
+        <package>20 SSOP-A</package>
+        <projecttype>Touch+Protocol</projecttype>
+        <path>E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\DISPLAY_TOUCH</path>
+        <name>DISPLAY_TOUCH</name>
+        <libconfig>
+            <component>
+                <lib>MAIN_PROGRAM</lib>
+                <files>
+                    <file name="MAIN_PROGRAM.EXT" />
+                    <file name="MAIN_PROGRAM.INC" />
+                    <file name="MAIN_PROGRAM_V300.asm" />
+                </files>
+            </component>
+        </libconfig>
+    </project>
+    <mcuconfig>
+        <component>
+            <rect x="456" y="99" width="160" hight="40" />
+            <lib>BS84C12CA_CTOUCH</lib>
+            <attrib name="__KEY10_EN">False</attrib>
+            <attrib name="__KEY11_EN">False</attrib>
+            <attrib name="__KEY12_EN">False</attrib>
+            <attrib name="__KEY1_EN">True</attrib>
+            <attrib name="__KEY2_EN">True</attrib>
+            <attrib name="__KEY3_EN">True</attrib>
+            <attrib name="__KEY4_EN">False</attrib>
+            <attrib name="__KEY5_EN">False</attrib>
+            <attrib name="__KEY6_EN">False</attrib>
+            <attrib name="__KEY7_EN">False</attrib>
+            <attrib name="__KEY8_EN">False</attrib>
+            <attrib name="__KEY9_EN">False</attrib>
+            <files>
+                <file name="BS84C12CA_CTOUCH.EXT" />
+                <file name="BS84C12CA_CTOUCH.INC" />
+                <file name="BS84C12CA_CTOUCH.INI" />
+                <file name="BS84C12CA_CTOUCH_EN.pdf" />
+                <file name="BS84C12CA_CTOUCH_SIM.pdf" />
+                <file name="BS84C12CA_CTOUCH_TRA.pdf" />
+                <file name="BS84C12CA_CTOUCH_V512.OBJ" />
+                <file name="Language.ini" />
+                <file name="Lib.ico" />
+                <file name="Touch.png" />
+            </files>
+            <child>
+                <perip_pin index="0" support_pin="1">
+                    <match_pin>0</match_pin>
+                </perip_pin>
+                <perip_pin index="1" support_pin="1">
+                    <match_pin>1</match_pin>
+                </perip_pin>
+                <perip_pin index="2" support_pin="1">
+                    <match_pin>2</match_pin>
+                </perip_pin>
+                <perip_pin index="3" support_pin="1">
+                    <match_pin>-1</match_pin>
+                </perip_pin>
+                <perip_pin index="4" support_pin="1">
+                    <match_pin>-1</match_pin>
+                </perip_pin>
+                <perip_pin index="5" support_pin="1">
+                    <match_pin>-1</match_pin>
+                </perip_pin>
+                <perip_pin index="6" support_pin="1">
+                    <match_pin>-1</match_pin>
+                </perip_pin>
+                <perip_pin index="7" support_pin="1">
+                    <match_pin>-1</match_pin>
+                </perip_pin>
+                <perip_pin index="8" support_pin="1">
+                    <match_pin>-1</match_pin>
+                </perip_pin>
+                <perip_pin index="9" support_pin="1">
+                    <match_pin>-1</match_pin>
+                </perip_pin>
+                <perip_pin index="10" support_pin="1">
+                    <match_pin>-1</match_pin>
+                </perip_pin>
+                <perip_pin index="11" support_pin="1">
+                    <match_pin>-1</match_pin>
+                </perip_pin>
+            </child>
+        </component>
+        <component>
+            <rect x="621" y="99" width="160" hight="40" />
+            <lib>TK_IIC_HXT_SLAVE</lib>
+            <attrib name="SCL_EN">True</attrib>
+            <attrib name="SDA_EN">True</attrib>
+            <files>
+                <file name="IIC.png" />
+                <file name="IIC_SLAVE_HXT_CTOUCH_V512.DEF" />
+                <file name="IIC_SLAVE_V100.asm" />
+                <file name="Language.ini" />
+                <file name="Lib.ico" />
+                <file name="TK_IIC_HXT_SLAVE.EXT" />
+                <file name="TK_IIC_HXT_SLAVE.INC" />
+                <file name="TK_IIC_HXT_SLAVE_EN.pdf" />
+                <file name="TK_IIC_HXT_SLAVE_SIM.pdf" />
+                <file name="TK_IIC_HXT_SLAVE_TRA.pdf" />
+            </files>
+            <child>
+                <perip_pin index="0" support_pin="1">
+                    <match_pin>17</match_pin>
+                </perip_pin>
+                <perip_pin index="1" support_pin="1">
+                    <match_pin>19</match_pin>
+                </perip_pin>
+            </child>
+        </component>
+        <component>
+            <rect x="456" y="144" width="160" hight="40" />
+            <lib>USER_PROGRAM_C</lib>
+            <files>
+                <file name="Display.c" />
+                <file name="Display.h" />
+                <file name="IIC.c" />
+                <file name="IIC.h" />
+                <file name="Language.ini" />
+                <file name="Lib.ico" />
+                <file name="USER_PROGRAM_C.C" />
+                <file name="USER_PROGRAM_C.EXT" />
+                <file name="USER_PROGRAM_C.INC" />
+                <file name="USER_PROGRAM_C_EN.pdf" />
+                <file name="USER_PROGRAM_C_SIM.pdf" />
+                <file name="USER_PROGRAM_C_TRA.pdf" />
+            </files>
+            <child />
+        </component>
+    </mcuconfig>
+    <usrwnd>
+        <download flag="0" />
+        <voltage flag="5" />
+    </usrwnd>
+</tkproject>

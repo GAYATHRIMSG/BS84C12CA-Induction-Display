@@ -1,0 +1,531 @@
+
+Linker Version 8.7.7.220718
+Input Object File: E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\MAIN_PROGRAM_V300.OBJ
+Input Object File: E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC_SLAVE_V100.OBJ
+Input Object File: C:\Users\lenovo\AppData\Local\Temp\BS84C12CA_CTOUCH_V512.OBJ
+Input Object File: E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ
+Input Object File: E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\STARTUP1_L.OBJ
+Input Object File: E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC.OBJ
+Input Object File: E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\DISPLAY.OBJ
+Input Object File: E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\KEY.OBJ
+
+Input Library File: F:\FLAME FREE\HT-IDE V3.0.0\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB
+Input Library File: F:\FLAME FREE\HT-IDE V3.0.0\HT-IDE3000V8.x\LIB\v3_lmrsc.lib
+
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     0000h     0000h    0001h      CODE               PROGRAM_ENTRY (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\MAIN_PROGRAM_V300.OBJ)
+     00h     0001h     0007h    0007h      CODE               @crom (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\DISPLAY.OBJ)
+     00h     0008h     0009h    0002h      CODE               TOUCH_INT (C:\Users\lenovo\AppData\Local\Temp\BS84C12CA_CTOUCH_V512.OBJ)
+     00h     000ah     000ah    0001h      CODE               _Key_Init (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\KEY.OBJ)
+     00h     000bh     000bh    0001h      CODE               CTOUCH_VERSION (C:\Users\lenovo\AppData\Local\Temp\BS84C12CA_CTOUCH_V512.OBJ)
+     00h     000ch     0011h    0006h      CODE               _Display_ON_Message (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     00h     0012h     0012h    0001h      CODE               _Key_Scan (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\KEY.OBJ)
+     00h     0013h     0013h    0001h      CODE               _Key_Drive (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\KEY.OBJ)
+     00h     0014h     0015h    0002h      CODE               IIC_INT_CODE (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC_SLAVE_V100.OBJ)
+     00h     0018h     001bh    0004h      CODE               TIME_BASE_INT (C:\Users\lenovo\AppData\Local\Temp\BS84C12CA_CTOUCH_V512.OBJ)
+     00h     001ch     0099h    007eh      CODE               CTOUCH_INI (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\MAIN_PROGRAM_V300.OBJ)
+     00h     009ah     00d2h    0039h      CODE               MAIN_PROGRAM (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\MAIN_PROGRAM_V300.OBJ)
+     00h     00d3h     019dh    00cbh      CODE               TK_IIC_HXT_SLAVE_USER_CODE (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC_SLAVE_V100.OBJ)
+     00h     019eh     01efh    0052h      CODE               TK_IIC_HXT_SLAVE_STANDARD_RW_CO (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC_SLAVE_V100.OBJ)
+     00h     01f0h     022ah    003bh      CODE               TK_IIC_HXT_SLAVE_STANDARD_CODE (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC_SLAVE_V100.OBJ)
+     00h     022bh     066ah    0440h      CODE               CTOUCH_CODE (C:\Users\lenovo\AppData\Local\Temp\BS84C12CA_CTOUCH_V512.OBJ)
+     00h     066bh     067bh    0011h      CODE               @ROMDATA_BASE (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     00h     067ch     068fh    0014h      CODE               _delay_custom (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     00h     0690h     06c2h    0033h      CODE               _USER_PROGRAM_C_INITIAL (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     00h     06c3h     06cbh    0009h      CODE               _Display_Blank_Dashes (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     00h     06cch     06d2h    0007h      CODE               _Display_OFF_Message (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     00h     06d3h     06d9h    0007h      CODE               _Blink_LED_IND (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     00h     06dah     0841h    0168h      CODE               _USER_PROGRAM_C (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     00h     0842h     084fh    000eh      CODE               _USER_PROGRAM_C_HALT_PREPARE (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     00h     0850h     0854h    0005h      CODE               _USER_PROGRAM_C_HALT_WAKEUP (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     00h     0855h     0858h    0004h      CODE               _USER_PROGRAM_C_RETURN_MAIN (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     00h     0859h     0863h    000bh      CODE               _delay5us (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC.OBJ)
+     00h     0864h     086eh    000bh      CODE               _IIC_start (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC.OBJ)
+     00h     086fh     0877h    0009h      CODE               _IIC_stop (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC.OBJ)
+     00h     0878h     089ah    0023h      CODE               _IIC_respons (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC.OBJ)
+     00h     089bh     08aah    0010h      CODE               _MaterAck (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC.OBJ)
+     00h     08abh     08c4h    001ah      CODE               _IIC_write_byte (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC.OBJ)
+     00h     08c5h     08e1h    001dh      CODE               _IIC_read_byte (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC.OBJ)
+     00h     08e2h     08f9h    0018h      CODE               _IIC_WriteData (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC.OBJ)
+     00h     08fah     090fh    0016h      CODE               _IIC_ReadData (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC.OBJ)
+     00h     0910h     0932h    0023h      CODE               _IIC_ReadData_2byte (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC.OBJ)
+     00h     0933h     0954h    0022h      CODE               _Display_Init (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\DISPLAY.OBJ)
+     00h     0955h     099bh    0047h      CODE               _Set_Segments (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\DISPLAY.OBJ)
+     00h     099ch     0a14h    0079h      CODE               _Display_Numbers (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\DISPLAY.OBJ)
+     00h     0a15h     0a2ch    0018h      CODE               _PowerON_Display (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\DISPLAY.OBJ)
+     00h     0a2dh     0a32h    0006h      CODE               _Display_E0_Error (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\DISPLAY.OBJ)
+     00h     0a33h     0a4ah    0018h      CODE               _PowerOFF_Display (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\DISPLAY.OBJ)
+     00h     0a4bh     0a60h    0016h      CODE               _delay_ms (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\DISPLAY.OBJ)
+     00h     0a61h     0a6fh    000fh      CODE               _delay_us (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\DISPLAY.OBJ)
+     00h     0a70h     0ae6h    0077h      CODE               _Display_Update (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\DISPLAY.OBJ)
+     00h     0ae7h     0af4h    000eh      CODE               _builtin_holtek_delay_isr00 (F:\FLAME FREE\HT-IDE V3.0.0\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0af5h     0b19h    0025h      CODE               _builtin_holtek_divmodhi4_isr00 (F:\FLAME FREE\HT-IDE V3.0.0\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     0b1ah     0b27h    000eh      CODE               _CROM2PROM (CROM2PROM)
+     00h     0080h     00a0h    0021h      DATA     0.7272    CTOUCH_DATA0 (C:\Users\lenovo\AppData\Local\Temp\BS84C12CA_CTOUCH_V512.OBJ)
+     00h     00a1h     00a9h    0009h      DATA     20.333    MAIN_DATA (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\MAIN_PROGRAM_V300.OBJ)
+     00h     00aah     00c1h    0018h      DATA     0.875     TK_IIC_HXT_SLAVE_USER_RAM (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC_SLAVE_V100.OBJ)
+     00h     00c2h     00c3h    0002h      DATA     3         TK_IIC_HXT_SLAVE_STANDARD_RW_RA (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC_SLAVE_V100.OBJ)
+     00h     00c4h     00c9h    0006h      DATA     7         TK_IIC_HXT_SLAVE_STANDARD_RAM (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC_SLAVE_V100.OBJ)
+     00h     00cah     00cbh    0002h      DATA     22        @BITDATASEC (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     00h     00cch     00cch    0001h      DATA     102       @data_ra (F:\FLAME FREE\HT-IDE V3.0.0\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00cdh     00cdh    0001h      DATA     42        @data_rb (F:\FLAME FREE\HT-IDE V3.0.0\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00ceh     00ceh    0001h      DATA     35        @data_rc (F:\FLAME FREE\HT-IDE V3.0.0\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00cfh     00cfh    0001h      DATA     11        @data_rd (F:\FLAME FREE\HT-IDE V3.0.0\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00d0h     00d0h    0001h      DATA     10        @data_re (F:\FLAME FREE\HT-IDE V3.0.0\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00d1h     00d1h    0001h      DATA     7         @data_rf (F:\FLAME FREE\HT-IDE V3.0.0\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00d2h     00d2h    0001h      DATA     6         @data_rg (F:\FLAME FREE\HT-IDE V3.0.0\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00dfh     00dfh    0001h      DATA     11        @HCCINIT_i2c_fail_count (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     00h     00e0h     00e1h    0002h      DATA     11        @HCCINIT_current_value (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     00h     00e2h     00e2h    0001h      DATA     9         @HCCINIT_display_enabled (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\DISPLAY.OBJ)
+     00h     00e3h     00e6h    0004h      DATA     8.75      @HCCINIT_display_digits (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     00h     00e7h     00e7h    0001h      DATA     8         @HCCINIT_current_digit (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\DISPLAY.OBJ)
+     00h     00e8h     00e9h    0002h      DATA     5         @HCCINIT_on_message_counter (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     00h     00eah     00ebh    0002h      DATA     4         @HCCINIT_blank_counter (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     00h     00ech     00edh    0002h      DATA     4         @HCCINIT_off_message_counter (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     00h     00eeh     00eeh    0001h      DATA     4         @HCCINIT_brightness (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\DISPLAY.OBJ)
+     00h     00efh     00f0h    0002h      DATA     3         @HCCINIT___poll_counter_2228 (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     00h     00f1h     00f2h    0002h      DATA     3         @HCCINIT___i2c_test_counter_2221 (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     00h     00f3h     00f4h    0002h      DATA     3         @HCCINIT___debounce_counter_2227 (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     00h     00f5h     00f8h    0004h      DATA     2         @HCCINIT_display_shadow (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\DISPLAY.OBJ)
+     00h     00f9h     00fah    0002h      DATA     1         @HCCINIT_last_key_buf (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     00h     00fbh     00fch    0002h      DATA     7         @HCCINIT0___u16_Key_Buf_2223 (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     00h     00fdh     00ffh    0003h      DATA     0         @HCCINIT0_gu8v_adc_data_1 (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC.OBJ)
+     01h     0080h     00afh    0030h      DATA     0         CTOUCH_DATA1 (C:\Users\lenovo\AppData\Local\Temp\BS84C12CA_CTOUCH_V512.OBJ)
+     02h     0080h     00afh    0030h      DATA     0         CTOUCH_DATA2 (C:\Users\lenovo\AppData\Local\Temp\BS84C12CA_CTOUCH_V512.OBJ)
+     03h     0080h     00dfh    0060h      DATA     0         CTOUCH_DATA3 (C:\Users\lenovo\AppData\Local\Temp\BS84C12CA_CTOUCH_V512.OBJ)
+
+     Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     00d9h     00d9h    0001h      LOCAL    3         _USER_PROGRAM_C_INITIAL (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     00h     00d3h     00d3h    0000h      LOCAL    0         _Display_Init (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\DISPLAY.OBJ)
+     00h     00d7h     00d8h    0002h      LOCAL    2.5       _IIC_WriteData (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC.OBJ)
+     00h     00d3h     00d3h    0000h      LOCAL    0         _IIC_start (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC.OBJ)
+     00h     00d3h     00d3h    0000h      LOCAL    0         _delay5us (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC.OBJ)
+     00h     00d3h     00d4h    0002h      LOCAL    3.5       _IIC_write_byte (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC.OBJ)
+     00h     00d5h     00d6h    0002h      LOCAL    3         _IIC_respons (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC.OBJ)
+     00h     00d5h     00d5h    0000h      LOCAL    0         _Blink_LED_IND (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     00h     00d3h     00d4h    0002h      LOCAL    3         _delay_custom (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     00h     00d3h     00d3h    0000h      LOCAL    0         _IIC_stop (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC.OBJ)
+     00h     00dfh     00dfh    0000h      LOCAL    0         _USER_PROGRAM_C (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     00h     00d3h     00d3h    0000h      LOCAL    0         _GET_KEY_BITMAP (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\MAIN_PROGRAM_V300.OBJ)
+     00h     00d3h     00d3h    0000h      LOCAL    0         _Display_ON_Message (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     00h     00d3h     00d3h    0000h      LOCAL    0         _Display_OFF_Message (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     00h     00d3h     00d3h    0000h      LOCAL    0         _Display_Blank_Dashes (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     00h     00dbh     00deh    0004h      LOCAL    3.5       _Display_Numbers (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\DISPLAY.OBJ)
+     00h     00d3h     00dah    0008h      LOCAL    9.5       _builtin_holtek_divmodhi4_isr00 (F:\FLAME FREE\HT-IDE V3.0.0\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00d7h     00d9h    0003h      LOCAL    3         _IIC_ReadData_2byte (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC.OBJ)
+     00h     00d3h     00d4h    0002h      LOCAL    4         _IIC_read_byte (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC.OBJ)
+     00h     00d3h     00d3h    0001h      LOCAL    2         _MaterAck (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC.OBJ)
+     00h     00d3h     00d3h    0000h      LOCAL    0         _Display_E0_Error (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\DISPLAY.OBJ)
+     00h     00d5h     00d5h    0000h      LOCAL    0         _Display_Update (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\DISPLAY.OBJ)
+     00h     00d3h     00d3h    0000h      LOCAL    0         _Crom2Prom (CROM2PROM)
+     00h     00d3h     00d3h    0001h      LOCAL    8         _Set_Segments (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\DISPLAY.OBJ)
+     00h     00d3h     00d4h    0002h      LOCAL    7         _delay_us (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\DISPLAY.OBJ)
+     00h     00d3h     00d3h    0000h      LOCAL    0         _USER_PROGRAM_C_RETURN_MAIN (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     00h     00d7h     00d9h    0003h      LOCAL    2         _IIC_ReadData (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC.OBJ)
+     00h     00d4h     00d4h    0000h      LOCAL    0         _PowerON_Display (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\DISPLAY.OBJ)
+     00h     00d3h     00d3h    0001h      LOCAL    3         _builtin_holtek_delay_isr00 (F:\FLAME FREE\HT-IDE V3.0.0\HT-IDE3000V8.x\LIB\LIBHOLTEKGCC.LIB)
+     00h     00d4h     00d4h    0000h      LOCAL    0         _PowerOFF_Display (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\DISPLAY.OBJ)
+
+     Indepentent Local Sections
+
+     Bank    Start     End      Length     Class    AvgIns    Name
+     00h     00d3h     00d3h    0000h      ILOCAL   0         _GET_LIB_VER (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\MAIN_PROGRAM_V300.OBJ)
+     00h     00d3h     00d3h    0000h      ILOCAL   0         _GET_RCC_VALUE (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\MAIN_PROGRAM_V300.OBJ)
+     00h     00d3h     00d3h    0000h      ILOCAL   0         _GET_ENV_VALUE (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\MAIN_PROGRAM_V300.OBJ)
+     00h     00d3h     00d3h    0000h      ILOCAL   0         _GET_REF_VALUE (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\MAIN_PROGRAM_V300.OBJ)
+     00h     00d3h     00d3h    0000h      ILOCAL   0         IIC_WRITE_ENTRY (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC_SLAVE_V100.OBJ)
+     00h     00d3h     00d3h    0000h      ILOCAL   0         IIC_PRE_READ (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC_SLAVE_V100.OBJ)
+     00h     00d3h     00d3h    0000h      ILOCAL   0         IIC_INITIAL (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\IIC_SLAVE_V100.OBJ)
+     00h     00d3h     00d3h    0000h      ILOCAL   0         GET_KEY_THR_MP1 (C:\Users\lenovo\AppData\Local\Temp\BS84C12CA_CTOUCH_V512.OBJ)
+     00h     00d3h     00d3h    0000h      ILOCAL   0         _SET_KEY_THR (C:\Users\lenovo\AppData\Local\Temp\BS84C12CA_CTOUCH_V512.OBJ)
+     00h     00d3h     00d3h    0000h      ILOCAL   0         _GET_KEY_AMOUNT (C:\Users\lenovo\AppData\Local\Temp\BS84C12CA_CTOUCH_V512.OBJ)
+     03h     00e0h     00e0h    0000h      ILOCAL   0         _USER_PROGRAM_C_HALT_PREPARE (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     03h     00e0h     00e0h    0000h      ILOCAL   0         _USER_PROGRAM_C_HALT_WAKEUP (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\USER_PROGRAM_C.OBJ)
+     03h     00e0h     00e1h    0002h      ILOCAL   1         _delay_ms (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\DISPLAY.OBJ)
+     03h     00e0h     00e0h    0000h      ILOCAL   0         _Key_Init (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\KEY.OBJ)
+     03h     00e0h     00e1h    0002h      ILOCAL   0         _Key_Scan (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\KEY.OBJ)
+     03h     00e0h     00e0h    0000h      ILOCAL   0         _Key_Drive (E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\KEY.OBJ)
+
+     Public Symbols Information
+     Address            Public by Name
+     0096h              BALANCE_BUF
+     0095h              CHANNEL_INDEX
+     043eh              GET_KEY_REF_MPX
+     0442h              GET_KEY_THR_MP1
+     0439h              GET_M11_LIMIT_MPX
+     0435h              GET_M3_LIMIT_MPX
+     009eh              HALT_CAL_TIME
+     005ah              HALT_SAMPLING
+     005ah              HALT_SAVE_DATA
+     0093h              KEY_DBCE
+     0094h              KEY_STATE_BUF
+     0099h              SAMPLE_TIMES
+     009dh              SENS_CTRL
+     008eh              TKM_BUF
+     0086h              TKS_STACK
+     009ah              TKS_TIMER
+     009fh[3]           _ANY_KEY_PRESSF
+     0041h              _AUTOCHECKTOUCHIO
+     0280h              _BALANCE_CAP
+     022bh              _BS84C12CA_CTOUCH
+     005ah              _BS84C12CA_CTOUCH_HALT_PREPARE
+     0059h              _BS84C12CA_CTOUCH_HALT_WAKEUP
+     0241h              _BS84C12CA_CTOUCH_INITIAL
+     005ah              _BS84C12CA_CTOUCH_RETURN_MAIN
+     06d3h              _Blink_LED_IND
+     005ah              _CHECK_KEY_ENTER_HALT
+     0b1ah              _Crom2Prom
+     0b1ah              _Crom2PromNext
+     00a1h              _DATA_BUF
+     06c3h              _Display_Blank_Dashes
+     0a2dh              _Display_E0_Error
+     0933h              _Display_Init
+     099ch              _Display_Numbers
+     00dbh              _Display_Numbers_2
+     06cch              _Display_OFF_Message
+     000ch              _Display_ON_Message
+     0a70h              _Display_Update
+     009fh[0]           _FORCE_CALIBRATEF
+     002bh              _GETHYSTERESIS
+     0022h              _GETPONRESETTIMES
+     001eh              _GETSAMPLEWINDOWLIMIT
+     025bh              _GETSAMPLEWINDOWLIMIT_RET
+     001ch              _GETTKTMRSENS
+     0049h              _GET_ENV_VALUE
+     044ah              _GET_KEY_AMOUNT
+     0044h              _GET_KEY_BITMAP
+     0042h              _GET_LIB_VER
+     0047h              _GET_RCC_VALUE
+     004bh              _GET_REF_VALUE
+     0080h              _GLOBE_VARIES
+     00a9h              _HALT_STATE
+     08fah              _IIC_ReadData
+     0910h              _IIC_ReadData_2byte
+     08e2h              _IIC_WriteData
+     08c5h              _IIC_read_byte
+     0878h              _IIC_respons
+     0864h              _IIC_start
+     086fh              _IIC_stop
+     08abh              _IIC_write_byte
+     008ch              _KEY_DATA
+     008ah              _KEY_IO_SEL
+     0180h              _KEY_REF
+     01a4h              _KEY_STATUS
+     0198h              _KEY_THR
+     0013h              _Key_Drive
+     000ah              _Key_Init
+     0012h              _Key_Scan
+     0241h              _LIBRARY_RESET
+     0278h              _LOAD_BALCAP
+     002ch              _LOAD_TKS_GLOBE_VARIES
+     089bh              _MaterAck
+     0025h              _PONDIVRESET
+     030bh              _PON_CALIBRATE_ENTER
+     0a33h              _PowerOFF_Display
+     0a15h              _PowerON_Display
+     009fh[2]           _SCAN_CYCLEF
+     0001h              _SEGMENT_PATTERNS
+     0447h              _SET_KEY_THR
+     0083h              _STANDBY_TIME
+     0084h              _STANDBY_TIME_CTRL
+     0955h              _Set_Segments
+     02bch              _TKM_RESET
+     009fh[5]           _TKS_250MSF
+     009fh[6]           _TKS_500MSF
+     009fh[4]           _TKS_63MSF
+     009fh[1]           _TKS_ACTIVEF
+     009fh              _TKS_FLAGA
+     0085h              _TKS_TIME_BASE
+     01fah              _TK_IIC_HXT_SLAVE
+     00ffh              _TK_IIC_HXT_SLAVE_HALT_PREPARE
+     00ffh              _TK_IIC_HXT_SLAVE_HALT_WAKEUP
+     01fch              _TK_IIC_HXT_SLAVE_INITIAL
+     0101h              _TK_IIC_HXT_SLAVE_RETURN_MAIN
+     0041h              _TOUCHKEYRAMRESET
+     00a0h[0]           _TOUCH_POWER_SAVEF
+     06dah              _USER_PROGRAM_C
+     0842h              _USER_PROGRAM_C_HALT_PREPARE
+     0850h              _USER_PROGRAM_C_HALT_WAKEUP
+     0690h              _USER_PROGRAM_C_INITIAL
+     0855h              _USER_PROGRAM_C_RETURN_MAIN
+     0ae9h              __DELAYY0_isr00
+     0ae9h              __DELAYY1_isr00
+     0ae8h              __DELAYY2_isr00
+     0ae8h              __DELAYY3_isr00
+     0ae7h              __DELAYY4_isr00
+     0ae7h              __DELAYY5_isr00
+     027ah              __LOAD_BALCAP
+     00eah              _blank_counter
+     00eeh              _brightness
+     0af5h              _builtin_holtek_udivmodhi4_isr00
+     00dah              _builtin_holtek_udivmodhi4_isr00_2
+     00e7h              _current_digit
+     00e0h              _current_value
+     0859h              _delay5us
+     067ch              _delay_custom
+     00d3h              _delay_custom_2
+     0a4bh              _delay_ms
+     03e0h              _delay_ms_2
+     0a61h              _delay_us
+     00e3h              _display_digits
+     00e2h              _display_enabled
+     00fdh              _gu8v_adc_data_1
+     00cah[3]           _i2c_error
+     00f9h              _last_key_buf
+     00ech              _off_message_counter
+     00e8h              _on_message_counter
+     00cah[4]           _show_blank_dashes
+     00cah[5]           _show_off_message
+     00cah[6]           _show_on_message
+     00cah[7]           _system_power_off
+     00cbh[0]           _system_power_on
+     00cch              ra
+     00cdh              rb
+     00ceh              rc
+     00cfh              rd
+     00d0h              re
+     00d1h              rf
+     00d2h              rg
+
+     Address            Public by Value
+     0001h              _SEGMENT_PATTERNS
+     000ah              _Key_Init
+     000ch              _Display_ON_Message
+     0012h              _Key_Scan
+     0013h              _Key_Drive
+     001ch              _GETTKTMRSENS
+     001eh              _GETSAMPLEWINDOWLIMIT
+     0022h              _GETPONRESETTIMES
+     0025h              _PONDIVRESET
+     002bh              _GETHYSTERESIS
+     002ch              _LOAD_TKS_GLOBE_VARIES
+     0041h              _AUTOCHECKTOUCHIO
+     0041h              _TOUCHKEYRAMRESET
+     0042h              _GET_LIB_VER
+     0044h              _GET_KEY_BITMAP
+     0047h              _GET_RCC_VALUE
+     0049h              _GET_ENV_VALUE
+     004bh              _GET_REF_VALUE
+     0059h              _BS84C12CA_CTOUCH_HALT_WAKEUP
+     005ah              HALT_SAVE_DATA
+     005ah              _BS84C12CA_CTOUCH_RETURN_MAIN
+     005ah              _CHECK_KEY_ENTER_HALT
+     005ah              HALT_SAMPLING
+     005ah              _BS84C12CA_CTOUCH_HALT_PREPARE
+     0080h              _GLOBE_VARIES
+     0083h              _STANDBY_TIME
+     0084h              _STANDBY_TIME_CTRL
+     0085h              _TKS_TIME_BASE
+     0086h              TKS_STACK
+     008ah              _KEY_IO_SEL
+     008ch              _KEY_DATA
+     008eh              TKM_BUF
+     0093h              KEY_DBCE
+     0094h              KEY_STATE_BUF
+     0095h              CHANNEL_INDEX
+     0096h              BALANCE_BUF
+     0099h              SAMPLE_TIMES
+     009ah              TKS_TIMER
+     009dh              SENS_CTRL
+     009eh              HALT_CAL_TIME
+     009fh              _TKS_FLAGA
+     00a1h              _DATA_BUF
+     00a9h              _HALT_STATE
+     00cch              ra
+     00cdh              rb
+     00ceh              rc
+     00cfh              rd
+     00d0h              re
+     00d1h              rf
+     00d2h              rg
+     00d3h              _delay_custom_2
+     00dah              _builtin_holtek_udivmodhi4_isr00_2
+     00dbh              _Display_Numbers_2
+     00e0h              _current_value
+     00e2h              _display_enabled
+     00e3h              _display_digits
+     00e7h              _current_digit
+     00e8h              _on_message_counter
+     00eah              _blank_counter
+     00ech              _off_message_counter
+     00eeh              _brightness
+     00f9h              _last_key_buf
+     00fdh              _gu8v_adc_data_1
+     00ffh              _TK_IIC_HXT_SLAVE_HALT_PREPARE
+     00ffh              _TK_IIC_HXT_SLAVE_HALT_WAKEUP
+     0101h              _TK_IIC_HXT_SLAVE_RETURN_MAIN
+     0180h              _KEY_REF
+     0198h              _KEY_THR
+     01a4h              _KEY_STATUS
+     01fah              _TK_IIC_HXT_SLAVE
+     01fch              _TK_IIC_HXT_SLAVE_INITIAL
+     022bh              _BS84C12CA_CTOUCH
+     0241h              _BS84C12CA_CTOUCH_INITIAL
+     0241h              _LIBRARY_RESET
+     025bh              _GETSAMPLEWINDOWLIMIT_RET
+     0278h              _LOAD_BALCAP
+     027ah              __LOAD_BALCAP
+     0280h              _BALANCE_CAP
+     02bch              _TKM_RESET
+     030bh              _PON_CALIBRATE_ENTER
+     03e0h              _delay_ms_2
+     0435h              GET_M3_LIMIT_MPX
+     0439h              GET_M11_LIMIT_MPX
+     043eh              GET_KEY_REF_MPX
+     0442h              GET_KEY_THR_MP1
+     0447h              _SET_KEY_THR
+     044ah              _GET_KEY_AMOUNT
+     009fh[0]           _FORCE_CALIBRATEF
+     009fh[1]           _TKS_ACTIVEF
+     009fh[2]           _SCAN_CYCLEF
+     009fh[3]           _ANY_KEY_PRESSF
+     009fh[4]           _TKS_63MSF
+     009fh[5]           _TKS_250MSF
+     009fh[6]           _TKS_500MSF
+     00a0h[0]           _TOUCH_POWER_SAVEF
+     00cah[3]           _i2c_error
+     00cah[4]           _show_blank_dashes
+     00cah[5]           _show_off_message
+     00cah[6]           _show_on_message
+     00cah[7]           _system_power_off
+     00cbh[0]           _system_power_on
+     067ch              _delay_custom
+     0690h              _USER_PROGRAM_C_INITIAL
+     06c3h              _Display_Blank_Dashes
+     06cch              _Display_OFF_Message
+     06d3h              _Blink_LED_IND
+     06dah              _USER_PROGRAM_C
+     0842h              _USER_PROGRAM_C_HALT_PREPARE
+     0850h              _USER_PROGRAM_C_HALT_WAKEUP
+     0855h              _USER_PROGRAM_C_RETURN_MAIN
+     0859h              _delay5us
+     0864h              _IIC_start
+     086fh              _IIC_stop
+     0878h              _IIC_respons
+     089bh              _MaterAck
+     08abh              _IIC_write_byte
+     08c5h              _IIC_read_byte
+     08e2h              _IIC_WriteData
+     08fah              _IIC_ReadData
+     0910h              _IIC_ReadData_2byte
+     0933h              _Display_Init
+     0955h              _Set_Segments
+     099ch              _Display_Numbers
+     0a15h              _PowerON_Display
+     0a2dh              _Display_E0_Error
+     0a33h              _PowerOFF_Display
+     0a4bh              _delay_ms
+     0a61h              _delay_us
+     0a70h              _Display_Update
+     0ae7h              __DELAYY5_isr00
+     0ae7h              __DELAYY4_isr00
+     0ae8h              __DELAYY3_isr00
+     0ae8h              __DELAYY2_isr00
+     0ae9h              __DELAYY1_isr00
+     0ae9h              __DELAYY0_isr00
+     0af5h              _builtin_holtek_udivmodhi4_isr00
+     0b1ah              _Crom2Prom
+     0b1ah              _Crom2PromNext
+
+
+ROM Usage Statistics
+     Size      Used     Percentage
+     1000h     0b26h    69%
+
+RAM Usage Statistics
+    Bank      Size      Used     Percentage
+     00h       0080h     0080h    100%
+     01h       0080h     0030h    37%
+     02h       0080h     0030h    37%
+     03h       0080h     0062h    76%
+     Total     0200h     0142h    62%
+
+Use Stack Count
+_USER_PROGRAM_C_INITIAL: 4
+_USER_PROGRAM_C: 4
+_USER_PROGRAM_C_RETURN_MAIN: 1
+_IIC_ReadData: 3
+_PowerON_Display: 1
+_PowerOFF_Display: 1
+
+Call Tree
+    _USER_PROGRAM_C_INITIAL
+        _Display_Init (0)
+        _IIC_WriteData (0)
+            _IIC_start (1)
+                _delay5us (2)
+            _IIC_write_byte (1)
+                _delay5us (2)
+            _IIC_respons (1)
+                _delay5us (2)
+                _Blink_LED_IND (2)
+                    _delay_custom (3)
+            _IIC_stop (1)
+                _delay5us (2)
+        _delay_custom (0)
+    _USER_PROGRAM_C
+        _GET_KEY_BITMAP (0)
+        _Display_ON_Message (0)
+        _Display_OFF_Message (0)
+        _IIC_WriteData (0)
+            _IIC_start (1)
+                _delay5us (2)
+            _IIC_write_byte (1)
+                _delay5us (2)
+            _IIC_respons (1)
+                _delay5us (2)
+                _Blink_LED_IND (2)
+                    _delay_custom (3)
+            _IIC_stop (1)
+                _delay5us (2)
+        _Display_Blank_Dashes (0)
+        _Display_Numbers (0)
+            _builtin_holtek_divmodhi4_isr00 (1)
+        _IIC_ReadData_2byte (0)
+            _IIC_start (1)
+                _delay5us (2)
+            _IIC_write_byte (1)
+                _delay5us (2)
+            _IIC_respons (1)
+                _delay5us (2)
+                _Blink_LED_IND (2)
+                    _delay_custom (3)
+            _IIC_read_byte (1)
+                _delay5us (2)
+            _MaterAck (1)
+                _delay5us (2)
+            _IIC_stop (1)
+                _delay5us (2)
+        _Display_E0_Error (0)
+        _Display_Update (0)
+            _Crom2Prom (1)
+            _Set_Segments (1)
+            _delay_us (1)
+    _USER_PROGRAM_C_RETURN_MAIN
+        _Display_Init (0)
+    _IIC_ReadData
+        _IIC_start (0)
+            _delay5us (1)
+        _IIC_write_byte (0)
+            _delay5us (1)
+        _IIC_respons (0)
+            _delay5us (1)
+            _Blink_LED_IND (1)
+                _delay_custom (2)
+        _IIC_read_byte (0)
+            _delay5us (1)
+        _MaterAck (0)
+            _delay5us (1)
+        _IIC_stop (0)
+            _delay5us (1)
+    _PowerON_Display
+        _builtin_holtek_delay_isr00 (0)
+    _PowerOFF_Display
+        _builtin_holtek_delay_isr00 (0)
+
+HLINK: Program entry point at section 'PROGRAM_ENTRY' (address 0) of file 'E:\FLAME FREE Pvt ltd\CODE TASKS\BS84C12CA DISPLAY\FINAL WORKING CODE\DISPLAY_TOUCH\OutPut\MAIN_PROGRAM_V300.OBJ'
+
+Total 0 error(s), Total 0 Warning(s)
